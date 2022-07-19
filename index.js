@@ -57,7 +57,7 @@ if (cluster.isMaster) {
     });
 
     app.get("/", (req, res) => {
-        res.send("안녕하세요~! 저는<br>[" + master_id + ']서버의<br>워커 [' + cluster.worker.id + '] 입니다.');
+        res.send("안녕하세요 저는<br>[" + master_id + ']서버의<br>워커 [' + cluster.worker.id + '] 입니다.');
     });
 
     app.get('/workerKiller', (req, res) => {

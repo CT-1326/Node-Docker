@@ -4,8 +4,9 @@ services:
     build: .
     container_name: node-container
     image: node-image
-    restart: always
     volumes:
-      - "./app:/usr/src/app/app"
+      - .:/app
+      - /app/node_modules
+    restart: always
     ports:
-      - 8080:3000
+      - 80:3000
