@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node-service:
+    build: .
+    container_name: node-container
+    image: node-image
+    restart: always
+    volumes:
+      - "./app:/usr/src/app/app"
+    ports:
+      - 8080:3000
